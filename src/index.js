@@ -262,7 +262,7 @@ const initialize = async () => {
 
   // Wallet Support
   MMSupportPending.classList.add('d-none');
-  if(typeof ethereum === 'object' && ethereum.isMetaMask) {
+  if (typeof ethereum === 'object' && ethereum.isMetaMask) {
     MMSupported.classList.remove('d-none');
     MMNotSupported.classList.add('d-none');
   } else {
