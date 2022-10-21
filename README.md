@@ -2,7 +2,7 @@
 
 This is a simple test dapp for use in Go MetaRail e2e tests and manual QA.
 
-Currently hosted [here](https://test-dapp.gometarail.io).
+Currently hosted [here](https://gometarail.github.io/test-dapp/).
 
 ## Contributing
 
