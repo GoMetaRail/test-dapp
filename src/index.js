@@ -44,6 +44,11 @@ const chainIdDiv = document.getElementById('chainId');
 const accountsDiv = document.getElementById('accounts');
 const warningDiv = document.getElementById('warning');
 
+// Wallet Support Section
+const MMSupportPending = document.getElementById('MMSupportPending');
+const MMSupported = document.getElementById('MMSupported');
+const MMNotSupported = document.getElementById('MMNotSupported');
+
 // Basic Actions Section
 const onboardButton = document.getElementById('connectButton');
 const getAccountsButton = document.getElementById('getAccounts');
@@ -254,6 +259,16 @@ const initialize = async () => {
     signTypedDataV4,
     signTypedDataV4Verify,
   ];
+
+  // Wallet Support
+  MMSupportPending.classList.add('d-none');
+  if(typeof ethereum === 'object' && ethereum.isMetaMask) {
+    MMSupported.classList.remove('d-none');
+    MMNotSupported.classList.add('d-none');
+  } else {
+    MMSupported.classList.add('d-none');
+    MMNotSupported.classList.remove('d-none');
+  }
 
   const isMetaMaskConnected = () => accounts && accounts.length > 0;
 
